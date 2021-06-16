@@ -1,0 +1,14 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+h1,h3 {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
