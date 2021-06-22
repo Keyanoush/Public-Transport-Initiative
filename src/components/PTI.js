@@ -3,6 +3,7 @@ import "./PTI.css";
 import { Route, Redirect } from "react-router-dom";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
+import { NavBar } from "./nav/NavBar";
 
 export const PTI = () => (
 <>
@@ -11,6 +12,8 @@ export const PTI = () => (
         if (localStorage.getItem("pti_user")) {
           return (
             <>
+                <NavBar />
+
               <main>
                 <h1>Public Transport Initiative</h1>
                 <h3>About Us</h3>
