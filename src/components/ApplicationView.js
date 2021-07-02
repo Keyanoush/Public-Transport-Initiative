@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import { TransitRouteProvider } from "./route/TransitRouteProvider"
 import { TransitRoute } from "./route/TransitRoute"
 import { TransitRouteForm } from "./route/TransitRouteForm"
+import { TransitRouteDetail } from "./route/TransitRouteDetail"
 
 
 export const ApplicationViews = () => {
@@ -20,6 +21,12 @@ export const ApplicationViews = () => {
                     <TransitRoute />
                 </Route>
                 <Route exact path="/routes/create">
+                    <TransitRouteForm />
+                </Route>
+                <Route exact path="/routes/detail/:transitRouteId(\d+)">
+                    <TransitRouteDetail />
+                </Route>
+                <Route path="/routes/edit/:transitRouteId(\d+)">
                     <TransitRouteForm />
                 </Route>
             </TransitRouteProvider>
