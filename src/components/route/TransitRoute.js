@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { TransitRouteContext } from "./TransitRouteProvider"
 import "./TransitRoute.css"
-import { useHistory } from "react-router-dom"
+import { useHistory, Link } from "react-router-dom"
 
 export const TransitRoute = () => {
   // This state changes when `getTransitRoutes()` is invoked below
@@ -25,28 +25,16 @@ export const TransitRoute = () => {
       </button>
     <div className="transitRoutes">
       {
-        transitRoutes.map(transitRoute => {
-          return (
+        transitRoutes.map(transitRoute => <Link to={`/routes/detail/${transitRoute.id}`}>
             <div className="transitRoute" id={`transitRoute--${transitRoute.id}`} key={transitRoute.id}>
               <div className="transitRoute__name">
                 Name: { transitRoute.name }
               </div>
-              <div className="transitRoute__startLocation">
-                Start: { transitRoute.startLocation }
-              </div>
-              <div className="transitRoute__endLocation">
-                End: { transitRoute.endLocation }
-              </div>
-              <div className="transitRoute__isDelayed">
-                Delayed: { transitRoute.isDelayed }
-              </div>
-              <div className="transitRoute__timeTaken">
-                Time: { transitRoute.timeTaken }
-              </div>
             </div>
+            </Link>
           )
-        })
-      }
+        }
+      
     </div>
     </>
   )
