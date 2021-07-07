@@ -49,7 +49,7 @@ export const Register = (props) => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <main className="container--register" style={{ textAlign: "center" }}>
 
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>Account with that email address already exists</div>
@@ -58,19 +58,19 @@ export const Register = (props) => {
 
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Public Transport Initiative</h1>
-                <fieldset>
+                <fieldset className="first--name--input">
                     <label htmlFor="firstName"> First Name </label>
                     <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
                 </fieldset>
-                <fieldset>
+                <fieldset className="last--name--input">
                     <label htmlFor="lastName"> Last Name </label>
                     <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
                 </fieldset>
-                <fieldset>
+                <fieldset className="email--input--register">
                     <label htmlFor="inputEmail"> Email address </label>
                     <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
                 </fieldset>
-                <fieldset>
+                <fieldset className="signIn--button--submit">
                     <button type="submit"> Sign in </button>
                 </fieldset>
             </form>

@@ -1,0 +1,52 @@
+.container--login {
+    display: flex;
+    background-color: rgb(138, 190, 250);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.email--form--entry {
+    margin-bottom: 2rem;
+    border: 0.5rem white;
+}
+
+.signIn--button--submit {
+    margin-bottom: 2rem;
+    border: 0.5rem white;
+}
+
+body {
+    background-image: url(https://students.dts.edu/wp-content/uploads/sites/5/2019/05/nashville-skyline.jpg);
+    background-repeat: no-repeat;
+    background-size: 120rem;
+}
+
+.link--register {
+    margin-bottom: 2rem;
+}
+
+.first--name--input {
+    margin-bottom: 2rem;
+    border: 0.5rem white;
+}
+
+.last--name--input {
+    margin-bottom: 2rem;
+    border: 0.5rem white;
+}
+
+.email--input--register {
+    margin-bottom: 2rem;
+    border: 0.5rem white;
+}
+
+.container--register {
+    display: flex;
+    background-color: rgb(138, 190, 250);
+}
