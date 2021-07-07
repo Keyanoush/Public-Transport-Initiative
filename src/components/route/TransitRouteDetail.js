@@ -23,23 +23,23 @@ const handleDelete = () => {
   }
 
     useEffect(() => {
-        console.log("getTransitRoutes")
+        
         getTransitRoutes()
     },[])
     useEffect(() => {
-        console.log("inside useEffect", transitRoutes)
+        
         const thisTransitRoute = transitRoutes.find(a => a.id === parseInt(transitRouteId)) || {} 
 
         setTransitRoute(thisTransitRoute)
     }, [transitRoutes])
-    console.log("component loaded", transitRoutes)
+    
     return (
     <section className="transitRoute">
         <h3 className="transitRoute__name">name: { transitRoute.name }</h3>
-        <div className="transitRoute__startLocation">startLocation: { transitRoute.startLocation }</div>
-        <div className="transitRoute__endLocation">endLocation: { transitRoute.endLocation }</div>
-        <div className="transitRoute__isDelayed">isDelayed: { transitRoute.isDelayed }</div>
-        <div className="transitRoute__timeTaken">timeTaken: { transitRoute.timeTaken }</div>
+        <div className="transitRoute__startLocation">Start Location: { transitRoute.startLocation }</div>
+        <div className="transitRoute__endLocation">End Location: { transitRoute.endLocation }</div>
+        <div className="transitRoute__isDelayed">Time Delayed: { transitRoute.isDelayed }</div>
+        <div className="transitRoute__timeTaken">Time Taken: { transitRoute.timeTaken }</div>
         <button onClick={handleDelete}>Delete Route</button>
         <button onClick={() => {
             history.push(`/routes/edit/${transitRouteId}`)

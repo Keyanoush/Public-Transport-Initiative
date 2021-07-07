@@ -1,0 +1,23 @@
+.transitRoute__name {
+    font-size: 2rem;
+}
+
+.transitRoute__startLocation {
+    font-size: 1.5rem;
+}
+
+.transitRoute__endLocation {
+    font-size: 1.5rem;
+}
+
+.transitRoute__isDelayed {
+    font-size: 1.5rem;
+}
+
+.transitRoute__timeTaken {
+    font-size: 1.5rem;
+}
+
+.form-group {
+    font-size: 1.5rem;
+}

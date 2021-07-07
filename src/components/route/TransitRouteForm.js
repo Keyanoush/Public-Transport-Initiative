@@ -51,14 +51,18 @@ export const TransitRouteForm = () => {
           id: transitRoute.id,
           name: transitRoute.name,
           startLocation: transitRoute.startLocation,
-          endLocation: transitRoute.endLocation
+          endLocation: transitRoute.endLocation,
+          isDelayed: transitRoute.isDelayed,
+          timeTaken: transitRoute.timeTaken
         })
         .then(() => history.push(`/routes/detail/${transitRoute.id}`))
       }else {
         addTransitRoute({
           name: transitRoute.name,
           startLocation: transitRoute.startLocation,
-          endLocation: transitRoute.endLocation
+          endLocation: transitRoute.endLocation,
+          isDelayed: transitRoute.isDelayed,
+          timeTaken: transitRoute.timeTaken
         })
         .then(() => history.push("/routes"))
       }      
@@ -83,20 +87,32 @@ export const TransitRouteForm = () => {
       <h2 className="transitRouteForm__title">New TransitRoute</h2>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="name">TransitRoute name:</label>
-          <input type="text" id="name" required autoFocus className="form-control" placeholder="TransitRoute name" value={transitRoute.name} onChange={handleControlledInputChange} />
+          <label htmlFor="name">Transit Route Name:</label>
+          <input type="text" id="name" required autoFocus className="form-control" placeholder="Transit Route Name" value={transitRoute.name} onChange={handleControlledInputChange} />
         </div>
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="startLocation">TransitRoute startLocation:</label>
-          <input type="text" id="startLocation" required autoFocus className="form-control" placeholder="TransitRoute startLocation" value={transitRoute.startLocation} onChange={handleControlledInputChange} />
+          <label htmlFor="startLocation">Transit Route Start Location:</label>
+          <input type="text" id="startLocation" required autoFocus className="form-control" placeholder="Transit Route Start Location" value={transitRoute.startLocation} onChange={handleControlledInputChange} />
         </div>
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="endLocation">TransitRoute endLocation:</label>
-          <input type="text" id="endLocation" required autoFocus className="form-control" placeholder="TransitRoute endLocation" value={transitRoute.endLocation} onChange={handleControlledInputChange} />
+          <label htmlFor="endLocation">Transit Route End Location:</label>
+          <input type="text" id="endLocation" required autoFocus className="form-control" placeholder="Transit Route End Location" value={transitRoute.endLocation} onChange={handleControlledInputChange} />
+        </div>
+      </fieldset>
+      <fieldset>
+        <div className="form-group">
+          <label htmlFor="isDelayed">Transit Route Time Delayed:</label>
+          <input type="text" id="isDelayed" required autoFocus className="form-control" placeholder="Transit Route Time Delayed" value={transitRoute.isDelayed} onChange={handleControlledInputChange} />
+        </div>
+      </fieldset>
+      <fieldset>
+        <div className="form-group">
+          <label htmlFor="timeTaken">Transit Route Time Taken:</label>
+          <input type="text" id="timeTaken" required autoFocus className="form-control" placeholder="Transit Route Time Taken" value={transitRoute.timeTaken} onChange={handleControlledInputChange} />
         </div>
       </fieldset>
       <button className="btn btn-primary" disabled={isLoading} onClick={event => {
